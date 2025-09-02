@@ -1,6 +1,6 @@
-# PaperBoi 📰🚲🏠
+# PaperBoi 📰🚲🏠 (Pygame-Web Edition)
 
-A simple Paperboy-style arcade game in Python using Pygame and emoji sprites!
+Play the emoji Paperboy arcade game in your browser, thanks to [pygame-web](https://github.com/pygame-web/pygame-web)!
 
 ## How to Play
 
@@ -10,18 +10,36 @@ A simple Paperboy-style arcade game in Python using Pygame and emoji sprites!
 
 ## Requirements
 
-- Python 3.7+
-- Pygame (`pip install pygame`)
+- Modern browser (Chrome, Edge, Firefox, Safari)
+- No install needed!
 
-## How to Run
+## Local Development
 
+Open `index.html` in your browser using a local HTTP server (not by double-clicking).
+For example, with Python 3:
 ```bash
-pip install pygame
-python main.py
+python -m http.server
 ```
+Then visit [http://localhost:8000](http://localhost:8000)
 
-## Notes
+## Deploy on Vercel
 
-- All graphics are emoji—no image downloads required!
-- If you don't see some emojis, your OS or Python font may not support them.
-- Want to add features or custom art? Pull requests welcome!
+- Push your project to GitHub.
+- Import it on [vercel.com](https://vercel.com/) as a static project.
+- Your Pygame game will run in-browser!
+
+## How It Works
+
+- Loads `main.py` and runs it via `pygame-web` (compiled to WebAssembly).
+- All graphics are emoji (via system fonts).
+
+## Caveats
+
+- Not all Pygame features are supported in the browser.
+- Some emoji may not render identically on all platforms.
+- If you see a blank screen, check browser console for errors.
+
+## Credits
+
+- [pygame-web](https://github.com/pygame-web/pygame-web)
+- Original game by [PRIME8s](https://github.com/PRIME8s)
